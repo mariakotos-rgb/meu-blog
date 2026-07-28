@@ -11,3 +11,98 @@
        <p>vou compartilhar conhecimentos sobre maquiagem</p>
      </header>
   </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Maquiagem - Maria Clara</title>
+    <style>
+        header {
+            background-color: #ff69b4; /* Cor principal: Rosa */
+            color: #ffffff; /* Cor secundária: Branco */
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-color: #ffffff; /* Cor secundária: Branco */
+            color: #333333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mundo da Maquiagem</h1>
+        <p>Vou compartilhar sobre tendências, tutoriais e dicas incríveis de beleza!</p>
+    </header>
+    <main>
+        <article>
+            <img src="imagem-blog.png"
+                alt="Pincéis e produtos de maquiagem organizados.">
+            <div>
+                <h2>Boas-vindas ao meu Blog!</h2>
+                <p class="artigo-autor">Por: Maria Clara Lino Kotos</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar sobre o universo da maquiagem, resenhas dos meus produtos favoritos e truques para o dia a dia.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="imagem-blog.png"
+                alt="Produtos de preparação de pele como hidratante e primer.">
+            <div>
+                <h2>Como Preparar a Pele Antes da Make</h2>
+                <p class="artigo-autor">Por: Maria Clara Lino Kotos</p>
+                <p>Uma boa maquiagem começa nos cuidados com a pele! Lave bem o rosto, aplique um hidratante e não se esqueça do protetor solar para um acabamento impecável.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    })
+</script>
+
+</html>
